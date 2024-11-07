@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>hashtapp</title>
-</head>
 <body>
-    <h1>Welcome to hashtapp start partner program.</h1>
-    <p>Do you know what the "#" symbol means?.</p>
+     <button onclick="shareContent()">¡Comparte esto!</button>
+    <script>
+        function shareContent() {
+            if (navigator.share) {
+                navigator.share({
+                    title: '¡Mira esto!',
+                    text: '¡Aquí tienes algo interesante!',
+                    url: 'https://ejemplo.com'  // URL específica que quieras compartir
+                }).then(() => {
+                    console.log('¡Gracias por compartir!');
+                }).catch(console.error);
+            } else {
+                alert('La API de Compartir Web no es compatible en este navegador.');
+            }
+        }
+    </script>
 </body>
 </html>
