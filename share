@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="shareContent()">¡Comparte esto!</button>
+    <script>
+        function shareContent() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Do you know what the "#" symbol means?',
+                    text: 'take a look at these questions and lets make a great deal.',
+                    url: 'https://hashtapp.com/'  // URL específica que quieras compartir
+                }).then(() => {
+                    console.log('¡Thanks for Share!');
+                }).catch(console.error);
+            } else {
+                alert('Ups!.');
+            }
+        }
+    </script>
+</body>
+</html>
