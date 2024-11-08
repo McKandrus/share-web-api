@@ -2,18 +2,18 @@
 <html>
 <body>
      <button onclick="shareContent()">¡Share with your partner in crime!</button>
-    <script>
+   <script>
         function shareContent() {
             if (navigator.share) {
                 navigator.share({
-                    title: '¡Mira esto!',
-                    text: '¡Aquí tienes algo interesante!',
-                    url: 'https://ejemplo.com'  // URL específica que quieras compartir
+                    title: 'Do you know what the "#" symbol means?',
+                    text: 'take a look at these questions and lets make a great deal.',
+                    url: 'https://hashtapp.com/'  // URL específica que quieras compartir
                 }).then(() => {
-                    console.log('¡Gracias por compartir!');
+                    console.log('¡Thanks for Share!');
                 }).catch(console.error);
             } else {
-                alert('La API de Compartir Web no es compatible en este navegador.');
+                alert('Ups!.');
             }
         }
     </script>
